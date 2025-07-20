@@ -3,7 +3,7 @@ from transformers import pipeline
 
 chatbot = pipeline("text-generation", model="distilgpt2")
 
-def chat(prompt):
+def chat(prompt):   
     response = chatbot(prompt, max_length=50)[0]['generated_text']
     return response
 
